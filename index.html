@@ -1,2 +1,103 @@
 
-<h1>hello world!</h1>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="java/formValidate.js">
+		<link rel="stylesheet" href="java/rotateImage.js">
+        <title>Home</title>
+    </head>
+<body onload="startRotate()">
+	<header>
+		<img src="images/paul.jpg" alt="logo"
+		height="150" width="150">
+		<h1 style = "text-align:center;" >Life of Paul<h1>	
+	</header>
+    <ul class="links">
+        <li><a href = "index.html">Home</a></li>	
+		<li><a>Interests</a>
+			<ul>
+				<li><a href="#">Travel</a></li>
+				<li><a href="#">Fitness</a></li>
+			</ul>
+		</li>	
+        <li><a>About</a>
+			<ul>
+				<li><a href="pages/AboutPaul.html">Me</a></li>
+				<li><a href="pages/AboutTravelManagement.html">Wanderlust</a></li>
+				<li><a href="pages/AboutDestination.html">Lift</a></li>
+			</ul>
+		</li>
+		
+		<li><a>Social Media</a>
+			<ul>
+				<li><a href="#">Facebook</a></li>
+				<li><a href="#">Instagram</a></li>
+				<li><a href="#">Snapchat</a></li>
+			</ul>
+
+		</li>
+		
+        <li><a>Contact Paul!</a>
+			<ul>
+				<li><a href="">Contact Paul</a></li>
+				<li><a href="pages/feedbackform.html">feedback form</a></li>
+			</ul>
+		</li>
+    </ul>
+	<main>
+
+		<article id = "textLeft">
+			<h3>Welcome to Paul's page!</h3>
+			<p>Paul is a junior student at the oakland universirty, pursuing Information Technology.
+			Although Paul likes technology related things, but he also like to be physically act.
+			Infact, he currently is the fitness and atlhetics chair of an oraganizations that hi. 
+			Paul would love to be a a programmer, a web designer and his interest is keep expand.
+			</p>
+			
+			<p>Paul how ever got a passion in travelling. He loves to explore different new thin.
+			he loves adventurous activities. Infact, he has been in some of the different country.
+			the world..
+			</p>	
+		</article>
+		<div class = "slideshow">
+			<div class = "images">
+				<img src="images/travel1.jpg" width="256" height="256">
+			</div>
+			<div class = "images">
+				<img src="images/travel2.jpg" width="256" height="256">
+			</div>
+			<div class = "images">
+				<img src="images/travel3.jpg" width="256" height="256">
+			</div>
+			<div class = "images">
+				<img src="images/travel4.jpg" width="256" height="256">
+			</div>
+			<div class = "images">
+				<img src="images/travel5.jpg" width="256" height="256">
+			</div>
+		</div>
+	<script>
+		var index = 0;
+		imageRotate();
+	
+	function imageRotate() {
+	var images = document.getElementsByClassName("images");
+	for (var i = 0; i < images.length; i++) {
+		images[i].style.display = "none";
+	}
+	index++;
+	if (index > images.length) {index = 1}
+	images[index-1].style.display = "block";
+	setTimeout(imageRotate, 1000); // Change image every 2 seconds
+	}
+	</script>
+	</main>
+	<footer>
+		TCP source &copy; 2020 CSI 2520
+	</footer>
+
+</body>
+</html>
